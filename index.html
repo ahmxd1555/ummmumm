@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For noor fatima</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:linear-gradient(135deg,#6a0dad,#9b30ff,#4b0082);
+    min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Poppins',sans-serif;color:#fff;padding:20px;position:relative;
+  }
+  .page{display:none;width:100%;text-align:center;max-width:650px;animation:fade 0.5s ease;}
+  .page.active{display:block;}
+  @keyframes fade{from{opacity:0;transform:translateY(15px);}to{opacity:1;transform:translateY(0);}}
+  h1{font-size:2.4rem;margin-bottom:20px;font-weight:700;}
+  p{font-size:1.15rem;line-height:1.7;margin-bottom:20px;font-weight:400;}
+  button{
+    background:#fff;color:#6a0dad;border:none;padding:14px 28px;
+    font-size:1.05rem;border-radius:50px;cursor:pointer;font-weight:600;
+    transition:transform 0.2s;margin:8px;
+  }
+  button:hover{transform:scale(1.05);}
+  .flower{font-size:2rem;display:block;margin:15px 0;animation:float 3s ease-in-out infinite;}
+  @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+  .btn-row{display:flex;justify-content:center;gap:15px;margin-top:10px;flex-wrap:wrap;}
+  #sig{
+    position:fixed;right:20px;bottom:20px;
+    font-size:1rem;font-weight:600;opacity:0;pointer-events:none;
+    transition:opacity 0.6s ease;
+  }
+  #sig.show{opacity:1;}
+</style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div id="page1" class="page active">
+    <h1>salam noor fatima😋</h1>
+    <button onclick="showPage('page2')">Move Next</button>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div id="page2" class="page">
+    <span class="flower">🌸🌺🌷</span>
+    <p>warning: Talking to me cause severe headache and issues with ur lil brain😜</p>
+    <p>I am jealous of evey fucking british guy jab say tunay unka kaha tha🥰</p>
+    <button onclick="showPage('page3')">Move Next</button>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div id="page3" class="page">
+    <p>
+      TO The mossstttttt Beautiful and pretty girl jo mujhay kehti mujhay tareef karni nhi ati and here i am making a website for this bauni anyways pehli cheez IM REALLYY SORRY doosri vheez bhi yahi hai kay ikk main sometimes bohat bongyan mardeta aur tu maaf kardeti yahan par hi to masla ata hai tu itni achi hai maaf kerdeti hai aur main phir chawal mardeta plzz is dafa maaf kerday❤️
+    </p>
+    <br>
+    <p style="font-weight:600;">ab naraz HOGI MAIRAY SAY ?</p>
+    <div class="btn-row">
+      <button onclick="showPage('page4')">YES</button>
+      <button onclick="showPage('page5')">NO</button>
+    </div>
+  </div>
+
+  <!-- PAGE 4 = YES -->
+  <div id="page4" class="page">
+    <h1>ain't no way noor fatima😋</h1>
+    <button onclick="showPage('page3')">Move Back</button>
+  </div>
+
+  <!-- PAGE 5 = NO -->
+  <div id="page5" class="page">
+    <h1>TYTYTYTYTY ISSI LIYAY I LIKE U🥰</h1>
+  </div>
+
+  <div id="sig">love mizu 👀</div>
+
+<script>
+  function showPage(id){
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    if(id === 'page4' || id === 'page5'){
+      document.getElementById('sig').classList.add('show');
+    }
+  }
+</script>
+
+</body>
+</html>
